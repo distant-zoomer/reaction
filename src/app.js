@@ -48,20 +48,6 @@ app.engine( 'html', mustacheExpress() )
 app.set( 'view engine', 'html' )
 app.set( 'views', __dirname + '/views' )
 
-// // Webpack
-// webpack(
-//   {
-//     // Configuration Object
-//   },
-//   ( err, stats ) => { // Stats Object
-//   if ( err || stats.hasErrors() ) {
-//     // Handle errors here
-//   }
-//   // Done processing
-// });
-
-// app.use(bodyparser.json())
-// app.use(bodyparser.urlencoded({ extended: false }))
 app.use( express.static( 'public' ) )
 
 // Adding all of our routes
@@ -70,6 +56,28 @@ app.use( '/', baseRouter )
 app.use( '/', usersRouter )
 app.use( '/', loginRouter )
 app.use( '/', publicServerRouter )
+
+
+// Github pages converter
+var pages = require( 'node-github-pages' ) ( app, {
+  static: 'public', // Static directory path(css, js...)
+  path: 'docs' // Output path
+});
+
+pages.renderFiles(
+  [
+    {
+      'view': './views/index.html',
+      'url': '',
+      'options': { title: 'Express' }
+    },
+    {
+      'view': './views/public-server.html',
+      'url': '/public-server',
+      'options': { title: 'second page' }
+    }
+  ]
+)
 
 
 // Server

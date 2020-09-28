@@ -1,0 +1,29 @@
+#message-container {
+  margin: 1rem 1rem 80px 1rem;
+}
+
+#message-input {
+  background-color: #474747;
+  border-color: #474747;
+  color: #fff;
+}
+
+#message-input:active, #message-input:focus {
+  box-shadow: none;
+}
+
+.chat-individual-message {
+  /* font-size: 1.3rem; */
+  font-size: 2.3rem;
+  margin: 0.5rem 0;
+}
+
+#user-chat-message-container {
+  background-color: #363636;
+  bottom: 0;
+  color: #fff;
+  left: 0;
+  position: fixed;
+  text-align: center;
+  width: 100%;
+}
