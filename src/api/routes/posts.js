@@ -5,7 +5,10 @@ routes.get( '/posts', ( req, res ) => {
 })
 
 routes.post( '/posts', ( req, res ) => {
-  console.log( 'req.body', req.body )
+
+  // req.query gets the query parameters in object notation
+  console.log( 'req.query', req.query )
+
   res.json( { message: 'Successful JSON response' } )
 })
 

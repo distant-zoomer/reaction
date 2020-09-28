@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+    {{> partials/head }}
+    <link rel="stylesheet" href="/public-server-styles.css" />
+
+  </head>
+  <body>
+
+    <!-- Page content container -->
+    <section class="hero is-dark is-fullheight">
+
+      <!-- Hero head: will stick at the top -->
+      <div class="hero-head">
+        <!-- Navbar -->
+        {{> partials/navbar }}
+      </div>
+    
+      <!-- Hero content: will be in the middle -->
+      <!-- <div class="hero-body" style="overflow: hidden;">
+        <div class="container has-text-left"> -->
+
+          <!-- Message container -->
+          <div id="message-container"></div>
+
+        <!-- </div>
+      </div> -->
+    
+      <!-- Hero footer: will stick at the bottom -->
+      <!-- <div class="hero-foot"></div> -->
+
+      <!-- Sticky footer -->
+      <div id="user-chat-message-container">
+        <div class="content has-text-centered">
+
+          <!-- Where user writes message -->
+          <form id="send-container" style="width: 100%;">
+
+            <div class="field has-addons" style="margin: 1rem;">
+              <div class="control is-expanded">
+                <input type="text" id="message-input" class="input" autocomplete="off" tabindex="1" autofocus="on">
+              </div>
+              <div class="control">
+                <button type="submit" id="send-button" class="button is-purple">Send</button>
+              </div>
+            </div>
+
+          </form>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- <div class="has-background-grey-dark has-text-white is-full-height-w-navbar">
+
+      <div id="message-container"></div>
+
+      <form id="send-container">
+        <input type="text" id="message-input" autocomplete="off">
+        <button type="submit" id="send-button">Send</button>
+      </form>
+
+    </div> -->
+
+  </body>
+
+  <!-- Scripts -->
+  {{> partials/global-scripts }}
+  <script defer src="http://localhost:3000/socket.io/socket.io.js"></script>
+  <script defer src="/public-server-client-socket.js"></script>
+
+</html>

@@ -1,0 +1,58 @@
+.has-text-purple {
+  color: #7300e6;
+}
+
+.has-background-purple {
+  background-color: #7300e6;
+}
+
+/* Purple button */
+.button.is-purple {
+  background-color: #7300e6;
+  border-color: #7300e6;
+  color: #fff;
+}
+
+.button.is-purple:hover {
+  background-color: #6600cc;
+  border-color: #6600cc;
+}
+
+.button.is-purple:focus {
+  background-color: #6600cc;
+  border-color: #6600cc;
+}
+
+.button.is-purple:active {
+  background-color: #5900b3;
+  border-color: #5900b3;
+}
+
+.button.is-purple.is-outlined {
+  background-color: transparent;
+  border-color: #7300e6;
+  color: #7300e6;
+}
+
+.button.is-purple.is-inverted {
+  background-color: #fff;
+  color: #7300e6;
+}
+
+.button.is-purple.is-inverted:hover {
+  background-color: #f2f2f2;
+}
+
+.button.is-purple:focus {
+  border-color: transparent;
+}
+
+.button.is-info:active {
+  background-color: #7300e6;
+  border-color: transparent;
+}
+
+/* Full height */
+.is-full-height-w-navbar {
+  min-height: 94vh
+}
